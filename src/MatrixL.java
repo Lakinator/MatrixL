@@ -22,6 +22,16 @@ public class MatrixL {
     }
 
     /**
+     * Initializes a matrix with given values
+     *
+     * @param values -> the values
+     */
+    public MatrixL(int[][] values) {
+        this.m = values.length;
+        this.n = values[0].length;
+    }
+
+    /**
      * Initializes a matrix with a split matrix
      *
      * @param matrices - A split matrix which consists of 4 equally sized matrices in a 2x2 order
@@ -224,6 +234,10 @@ public class MatrixL {
 
     public int[][] getValues() {
         return values;
+    }
+
+    public void setValue(int m, int n, int x) {
+        values[m][n] = x;
     }
 
     public MatrixL copy() {
